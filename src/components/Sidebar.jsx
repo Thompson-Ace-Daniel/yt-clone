@@ -9,13 +9,13 @@ export function Sidebar() {
   ];
 
   return (
-    <aside className="sticky top-16 h-[calc(100vh-4rem)] hidden md:block w-60 shrink-0 border-r border-neutral-200 dark:border-neutral-800 p-2 overflow-y-auto">
+    <aside className="sticky top-16 h-[calc(100vh-4rem)] hidden md:block w-64 shrink-0 border-r border-neutral-200 dark:border-neutral-800 p-3 overflow-y-auto bg-white/60 dark:bg-neutral-900/60 backdrop-blur supports-[backdrop-filter]:bg-white/50 supports-[backdrop-filter]:dark:bg-neutral-900/50">
       <nav className="space-y-1">
         {items.map((item) => (
           <a
             key={item.label}
             href="#"
-            className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+            className="flex items-center gap-4 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
           >
             <item.icon />
             <span className="text-sm font-medium">{item.label}</span>
@@ -27,7 +27,7 @@ export function Sidebar() {
         <p className="px-3 text-xs text-neutral-500">Explore</p>
         <div className="mt-1 space-y-1">
           {['Trending', 'Music', 'Live', 'Gaming', 'News', 'Sports'].map((l) => (
-            <a key={l} className="block rounded-xl px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800" href="#">
+            <a key={l} className="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800" href="#">
               <span className="text-sm">{l}</span>
             </a>
           ))}
